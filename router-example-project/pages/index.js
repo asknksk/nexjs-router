@@ -1,11 +1,16 @@
+import EventList from "@/components/events/EventList";
 import { getFeaturedEvents } from "@/dummy-data";
 
 const HomePage = () => {
-    const feturedEvents = getFeaturedEvents();
-    console.log(feturedEvents)
+  const feturedEvents = getFeaturedEvents();
+  console.log(feturedEvents);
   return (
     <div>
-      <h1>The Home Page</h1>
+      <ul>
+        {/* {feturedEvents.map((event) => ( */}
+        <EventList items={feturedEvents} />
+        {/* ))} */}
+      </ul>
     </div>
   );
 };
